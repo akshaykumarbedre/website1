@@ -12,20 +12,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "YourChatbotCo - Smarter AI Chatbots for Indian Businesses",
+  title: "Agentic flow - Smarter AI Chatbots for Indian Businesses",
   description: "Build once. Only pay when used. No monthly charges if idle – perfect for ROI-focused companies and startups in India.",
   keywords: "AI chatbot, no monthly fees, Indian businesses, ROI focused, customer service automation",
   openGraph: {
-    title: "YourChatbotCo - Smarter AI Chatbots for Indian Businesses",
+    title: "Agentic flow - Smarter AI Chatbots for Indian Businesses",
     description: "Build once. Only pay when used. No monthly charges if idle – perfect for ROI-focused companies and startups in India.",
     url: "https://www.yourchatbotdomain.in",
-    siteName: "YourChatbotCo",
+    siteName: "Agentic flow",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "YourChatbotCo",
+        alt: "Agentic flow",
       },
     ],
     locale: "en_IN",
@@ -33,7 +33,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "YourChatbotCo - Smarter AI Chatbots for Indian Businesses",
+    title: "Agentic flow - Smarter AI Chatbots for Indian Businesses",
     description: "Build once. Only pay when used. No monthly charges if idle – perfect for ROI-focused companies and startups in India.",
     images: ["/twitter-image.jpg"],
   },
