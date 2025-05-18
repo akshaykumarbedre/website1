@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Check, Menu, X, Smartphone, MessageCircle, Database, Shield, ArrowRight } from 'lucide-react';
+import ChatbotWidget from '../components/ChatbotWidget';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -642,12 +643,8 @@ export default function Home() {
         </div>
       </footer>
       
-      {/* Floating Action Button for Mobile */}
-      <div className="md:hidden fixed bottom-6 right-6 z-40">
-        <button className="bg-primary text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition-colors">
-          <MessageCircle className="h-6 w-6" />
-        </button>
-      </div>
+      {/* Chatbot Widget */}
+      <ChatbotWidget />
       
       {/* Add CSS to handle animations */}
       <style jsx global>{`
