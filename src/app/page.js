@@ -534,35 +534,46 @@ export default function Home() {
         </div>
       </section>
       
-      {/* CTA Section */}
-      <section id="contact" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-primary text-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-medium">Ready to Get Started?</h2>
-          <p className="mt-4 text-lg text-white text-opacity-90 max-w-2xl mx-auto">
-            Contact Akshay Kumar BM for a custom quote or to claim your free sessions
-          </p>
-          
-          <div className="mt-8 grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div className="bg-white rounded-lg p-4">
-              <p className="font-medium text-gray-800">Email</p>
-              <p className="mt-1 text-gray-600">akshaykumarbedre.bm@gmail.com</p>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <p className="font-medium text-gray-800">Phone</p>
-              <p className="mt-1 text-gray-600">+91-9164623536</p>
-            </div>
-            <div className="bg-white rounded-lg p-4">
-              <p className="font-medium text-gray-800">Website</p>
-              <p className="mt-1 text-gray-600">www.agenticflow.studio</p>
-            </div>
-          </div>
-          
-          <a href="#contact" className="mt-10 inline-block bg-white text-primary text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-gray-100 transition-colors">
-            GET 500 FREE SESSIONS
-          </a>
-        </div>
-      </section>
-      
+    {/* CTA Section */}
+<section id="contact" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-primary text-white">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-medium">Ready to Get Started?</h2>
+    <p className="mt-4 text-lg text-white text-opacity-90 max-w-2xl mx-auto">
+      Contact Akshay Kumar BM for a custom quote or to claim your free sessions
+    </p>
+
+    <div className="mt-8 grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+      {/* Email */}
+      <div className="bg-white rounded-lg p-6 flex flex-col items-center min-h-[100px]">
+        <p className="font-medium text-gray-800 mb-1">Email</p>
+        <p className="text-gray-600 text-sm break-all text-center">
+          akshaykumarbedre.bm@gmail.com
+        </p>
+      </div>
+
+      {/* Phone */}
+      <div className="bg-white rounded-lg p-6 flex flex-col items-center min-h-[100px]">
+        <p className="font-medium text-gray-800 mb-1">Phone</p>
+        <p className="text-gray-600 text-sm text-center">
+          +91-9164623536
+        </p>
+      </div>
+
+      {/* Website */}
+      <div className="bg-white rounded-lg p-6 flex flex-col items-center min-h-[100px]">
+        <p className="font-medium text-gray-800 mb-1">Website</p>
+        <p className="text-gray-600 text-sm break-all text-center">
+          www.agenticflow.studio
+        </p>
+      </div>
+    </div>
+
+    <a href="#contact" className="mt-10 inline-block bg-white text-primary text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-gray-100 transition-colors">
+      GET 500 FREE SESSIONS
+    </a>
+  </div>
+</section>
+
       {/* Footer */}
       <footer className="py-12 px-6 md:px-12 lg:px-24 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
