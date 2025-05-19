@@ -18,7 +18,23 @@ export default function ChatbotPage() {
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [sessionId, setSessionId] = useState(null);
   const messagesEndRef = useRef(null);
+
+  // Initialize session ID on component mount
+  useEffect(() => {
+    // Check if we already have a session ID in localStorage
+    let storedSessionId = localStorage.getItem('chatbot_session_id');
+    
+    // If no session ID exists, create one
+    if (!storedSessionId) {
+      // Generate a random session ID with timestamp and random string
+      storedSessionId = `session-${Date.now()}-${Math.random().toString(36).substring(2, 15)}`;
+      localStorage.setItem('chatbot_session_id', storedSessionId);
+    }
+    
+    setSessionId(storedSessionId);
+  }, []);
 
   // Auto scroll to bottom when messages change
   useEffect(() => {
@@ -27,7 +43,7 @@ export default function ChatbotPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (input.trim() === '') return;
+    if (input.trim() === '' || !sessionId) return;
 
     const userMessage = input.trim();
     setInput('');
@@ -46,7 +62,7 @@ export default function ChatbotPage() {
         'https://5ccgqo82ug.execute-api.us-east-1.amazonaws.com/Chatbot-for-website',
         { 
           inputText: userMessage,
-          sessionId: "user-session-001"
+          sessionId: sessionId
         },
         {
           headers: {
@@ -64,7 +80,7 @@ export default function ChatbotPage() {
       // Add assistant response to chat with markdown support
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: assistantResponse, isMarkdown: true },
+        { role: 'assistant', content: assistantResponse, isMarkdown: false },
       ]);
       
       // Optionally, if you want to show the retrieved contexts as well:

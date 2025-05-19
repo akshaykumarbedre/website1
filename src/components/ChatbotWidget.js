@@ -33,9 +33,9 @@ const ChatbotWidget = ({ chatbotUrl = "/chatbot" }) => {
                 <div 
                     className="animate-fadeIn bg-white rounded-lg shadow-xl overflow-hidden flex flex-col" 
                     style={{ 
-                        width: isMobile ? '100vw' : '375px', 
-                        height: isMobile ? '100vh' : '600px',
-                        maxHeight: isMobile ? '100vh' : '80vh',
+                        width: isMobile ? '100vw' : '450px', 
+                        height: isMobile ? '100vh' : '650px',
+                        maxHeight: isMobile ? '100vh' : '85vh',
                         position: isMobile ? 'fixed' : 'relative',
                         top: isMobile ? '0' : 'auto',
                         right: isMobile ? '0' : 'auto',
