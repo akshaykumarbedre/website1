@@ -564,7 +564,7 @@ export default function Home() {
       <div className="bg-white rounded-lg p-6 flex flex-col items-center min-h-[100px]">
         <p className="font-medium text-gray-800 mb-1">Website</p>
         <p className="text-gray-600 text-sm break-all text-center">
-          www.agenticflow.studio
+          www.agentflow.studio
         </p>
       </div>
     </div>
