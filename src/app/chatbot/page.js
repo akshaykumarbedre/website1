@@ -177,9 +177,7 @@ export default function ChatbotPage() {
       {/* Header */}
     
 
-      {/* Main content */}
-      <main className="container mx-auto px-4 py-8 md:py-16">
-        <div className="max-w-4xl mx-auto">
+
 
           {/* Chat Interface */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-slate-200 mb-8">
@@ -301,7 +299,7 @@ export default function ChatbotPage() {
                   )}
                 </button>
               </div>
-              <div className="mt-3 flex flex-col sm:flex-row sm:justify-between items-center text-xs text-gray-500">
+              {/* <div className="mt-3 flex flex-col sm:flex-row sm:justify-between items-center text-xs text-gray-500">
                 <div className="mb-2 sm:mb-0 text-center sm:text-left">
                   Powered by WebAI • Your intelligent assistant
                 </div>
@@ -312,11 +310,10 @@ export default function ChatbotPage() {
                   <span>•</span>
                   <button className="hover:text-blue-600 transition">Feedback</button>
                 </div>
-              </div>
+              </div> */}
             </form>
           </div>
-        </div>
-      </main>
+      
       
       <style jsx global>{`
         .bg-pattern {
