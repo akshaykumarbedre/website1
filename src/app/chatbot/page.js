@@ -5,8 +5,7 @@ import { Bot, ArrowRight, Send, Loader2, ChevronLeft } from 'lucide-react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import Image from 'next/image';
+
 
 export default function ChatbotPage() {
   const [messages, setMessages] = useState([
@@ -80,7 +79,7 @@ export default function ChatbotPage() {
       // Add assistant response to chat with markdown support
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: assistantResponse, isMarkdown: false },
+        { role: 'assistant', content: assistantResponse, isMarkdown: true },
       ]);
       
       // Optionally, if you want to show the retrieved contexts as well:
@@ -197,7 +196,7 @@ export default function ChatbotPage() {
                       </div>
                     </div>
                     <div className="w-full">
-                      <h3 className="font-bold text-lg text-blue-800 mb-2">Welcome to WebAI Assistant!</h3>
+                      <h3 className="font-bold text-lg text-blue-800 mb-2">Welcome to AI Assistant!</h3>
                       <p className="text-gray-700 mb-3">How can I help you today?</p>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                         {[
