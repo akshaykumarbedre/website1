@@ -67,7 +67,7 @@ export default function ChatbotPage() {
           headers: {
             'Content-Type': 'application/json'
           },
-          timeout: 15000 // 15 second timeout
+          timeout: 20000 // 20 second timeout
         }
       );
       

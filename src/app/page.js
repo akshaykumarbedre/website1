@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Check, Menu, X, Smartphone, MessageCircle, Database, Shield, ArrowRight } from 'lucide-react';
+import { ChevronRight, Check, Menu, X, Smartphone, MessageCircle, Database, Shield, ArrowRight, Clock, TrendingUp, Users, HeartHandshake } from 'lucide-react';
 import ChatbotWidget from '../components/ChatbotWidget';
 
 export default function Home() {
@@ -41,23 +41,23 @@ export default function Home() {
   // Features data
   const features = [
     {
-      title: "Zero Monthly Server Fees",
-      description: "No usage = no billing. You're only charged for actual interactions, making costs transparent and predictable.",
+      title: "Effortless Integration",
+      description: "We manage both development and deployment, ensuring your chatbot integrates seamlessly with your website or platform—saving you time and resources so you can focus on running your business.",
       icon: <Database className="h-12 w-12 text-primary" />
     },
     {
-      title: "500 Free Sessions to Start",
-      description: "Receive 500 free chatbot interactions to test your use case and refine before committing.",
+      title: "Confidence in Adoption",
+      description: "Use 500 free sessions to test and refine your chatbot, minimizing risk and ensuring it aligns perfectly with your business goals before you commit.",
       icon: <MessageCircle className="h-12 w-12 text-primary" />
     },
     {
-      title: "Two Free Optimization Rounds",
-      description: "After launch, we perform two optimization cycles to enhance conversation flows, improve integration performance, and adjust tone based on real user feedback.",
+      title: "Ongoing Optimization",
+      description: "Benefit from two free optimization rounds post-launch, using real user feedback to keep your chatbot performing at its best—driving customer satisfaction and business success.",
       icon: <ChevronRight className="h-12 w-12 text-primary" />
     },
     {
-      title: "Free Website Widget",
-      description: "Every plan includes a ready-to-install chatbot widget for your website at no additional cost.",
+      title: "Enhanced Website Functionality",
+      description: "Add value with a free, customizable chatbot widget that improves user experience and engagement, potentially increasing conversions at no extra cost.",
       icon: <Smartphone className="h-12 w-12 text-primary" />
     }
   ];
@@ -66,48 +66,66 @@ export default function Home() {
   const pricingTiers = [
     {
       name: "Basic",
+      tagline: "Perfect for Startups and Small Businesses",
       description: "FAQ bot, simple rule-based or RAG",
-      buildFee: "₹30,000",
-      usageFee: "₹0.20 per session",
+      buildFee: "₹40,000",
+      discountedFee: "₹32,000",
+      discount: "20% OFF",
+      limitedDeal: "Limited-Time Deal: First 10 customers get 20% off!",
+     
       features: [
-        "500 free sessions",
-        "Website embedding",
-        "Basic Q&A capabilities",
-        "Email support",
-        "No server fees"
-      ]
+        "500 free sessions to start strong",
+        "Seamless website embedding for effortless integration",
+        "Basic Q&A capabilities to tackle FAQs",
+        "Email support to keep you on track",
+        "Free 1-hour consultation (worth ₹5,000)"
+      ],
+      guarantee: "Risk-Free Guarantee: Not happy? Full refund within 30 days—no questions asked.",
+      callToAction: "Why Choose Basic? Automate your customer service basics with zero risk. With only 10 discounted spots, act fast to lock in this deal!"
     },
     {
       name: "Growth",
+      tagline: "Built for Scaling Businesses Ready to Level Up",
       description: "Database/API integration, CRM sync",
       buildFee: "₹1,00,000",
-      usageFee: "₹1.50 per session + ₹0.005 per query",
+
+      discountedFee: "₹89,000",
+      discount: "10% OFF",
+      bonus: "This Month Only: Free team training session (worth ₹20,000)!",
+
       features: [
-        "500 free sessions",
-        "Website embedding",
-        "API integrations",
-        "CRM synchronization",
-        "Priority support",
-        "No server fees",
-        "Custom branding"
+        "500 free sessions to fuel your growth",
+        "API integrations to sync with your tools",
+        "CRM synchronization for smarter interactions",
+        "Custom branding to reflect your identity",
+        "Priority support to keep you ahead",
+        "Free training session to empower your team"
       ],
+      guarantee: "Performance Guarantee: If your bot doesn't handle 1,000 queries in the first month, we'll refund 50% of your build fee.",
+      callToAction: "Take your customer service to the next level with advanced features and a no-fail promise. Sign up this month to claim your bonus!",
       highlighted: true
     },
     {
       name: "Enterprise",
+      tagline: "The Ultimate Solution for Large Enterprises",
       description: "Admin panel, agent app, ERP/CRM",
       buildFee: "₹3,00,000",
-      usageFee: "₹2.00 per session + ₹0.007 per query + ₹0.05 per suggestion",
+      discountedFee: "₹2,55,000",
+    
+      discount: "15% OFF",
+
       features: [
-        "500 free sessions",
-        "Full admin dashboard",
-        "Agent application",
-        "ERP/CRM integration",
-        "Custom analytics",
-        "24/7 support",
-        "No server fees",
-        "White labeling"
-      ]
+        "500 free sessions to kick things off",
+        "Full admin dashboard for total control",
+        "Agent application to empower your team",
+        "ERP/CRM integration for seamless workflows",
+        "Custom analytics to measure success",
+        "White labeling to keep your brand front and center",
+        "24/7 support for round-the-clock assistance",
+        "Dedicated account manager (worth ₹50,000)"
+      ],
+      guarantee: "Ironclad SLA: 99.9% uptime guaranteed—or we compensate you for downtime.",
+      callToAction: "This isn't just a chatbot—it's a custom-built powerhouse with premium support. Your dedicated manager ensures it works perfectly for you."
     }
   ];
   
@@ -171,6 +189,40 @@ export default function Home() {
     }
   ];
   
+  // Benefits data
+  const benefits = [
+    {
+      title: "24/7 Customer Support",
+      description: "Provide round-the-clock service to your customers without increasing staffing costs.",
+      icon: <Clock className="h-12 w-12 text-primary" />
+    },
+    {
+      title: "Increased Conversion Rates",
+      description: "Convert more visitors into customers with instant responses to inquiries and personalized recommendations.",
+      icon: <TrendingUp className="h-12 w-12 text-primary" />
+    },
+    {
+      title: "Reduced Operational Costs",
+      description: "Automate repetitive tasks and handle multiple conversations simultaneously to lower support costs.",
+      icon: <Shield className="h-12 w-12 text-primary" />
+    },
+    {
+      title: "Enhanced Customer Experience",
+      description: "Deliver consistent, personalized interactions that improve customer satisfaction and loyalty.",
+      icon: <HeartHandshake className="h-12 w-12 text-primary" />
+    },
+    {
+      title: "Valuable Data Insights",
+      description: "Gain insights into customer needs, frequently asked questions, and pain points to improve your business.",
+      icon: <Database className="h-12 w-12 text-primary" />
+    },
+    {
+      title: "Scalable Customer Interactions",
+      description: "Handle surges in customer inquiries during peak times without adding resources.",
+      icon: <Users className="h-12 w-12 text-primary" />
+    }
+  ];
+  
   return (
     <div className="min-h-screen bg-background font-sans">
       {/* Header/App Bar */}
@@ -189,7 +241,7 @@ export default function Home() {
         </nav>
         
         <button className="hidden md:block bg-primary text-white text-sm uppercase font-medium px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
-          Get 500 Free Sessions
+          Get Free Consultation
         </button>
         
         {/* Mobile menu button */}
@@ -214,7 +266,7 @@ export default function Home() {
           <a href="#tech" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Tech Stack</a>
           <a href="#contact" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Contact</a>
           <button className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors">
-            Get 500 Free Sessions
+            Get Free Consultation
           </button>
         </div>
       )}
@@ -231,7 +283,7 @@ export default function Home() {
             </p>
             <div className="mt-8 space-x-4 flex flex-wrap gap-4">
               <a href="#contact" className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center">
-                Start Free Trial
+                Get Free Consultation
               </a>
               <a href="#pricing" className="border border-primary text-primary text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-50 transition-colors text-center">
                 See Pricing
@@ -339,7 +391,7 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="pricing" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-background">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Chatbot Packages & Pricing</h2>
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Pick Your Plan</h2>
           <p className="mt-4 text-center text-gray-700 max-w-2xl mx-auto">
             Choose the plan that fits your business needs. All plans include 500 free sessions to get started.
           </p>
@@ -358,31 +410,100 @@ export default function Home() {
                 )}
                 <div className={`${tier.highlighted ? 'bg-secondary' : 'bg-primary'} text-white py-4 px-6`}>
                   <h3 className="text-xl font-medium">Tier {index + 1}: {tier.name}</h3>
-                  <p className="text-white text-opacity-80 mt-1">{tier.description}</p>
+                  <p className="text-white text-opacity-90 mt-1">{tier.tagline}</p>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
+                  {tier.limitedDeal && (
+                    <div className="mb-4 bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                      <p className="text-sm font-medium text-yellow-800">{tier.limitedDeal}</p>
+                    </div>
+                  )}
+                  
+                  {tier.bonus && (
+                    <div className="mb-4 bg-blue-50 border border-blue-200 rounded-lg p-3">
+                      <p className="text-sm font-medium text-blue-800">{tier.bonus}</p>
+                    </div>
+                  )}
+                  
                   <div className="mb-6">
                     <p className="text-gray-600 text-sm uppercase tracking-wide">Build Fee (One-Time)</p>
-                    <p className="text-3xl font-medium text-gray-900 mt-1">{tier.buildFee}</p>
+                    <div className="flex items-end mt-1">
+                      {tier.discountedFee ? (
+                        <>
+                          <p className="text-3xl font-medium text-gray-900">{tier.discountedFee}</p>
+                          <p className="text-lg line-through text-gray-500 ml-2">{tier.buildFee}</p>
+                          <span className="ml-2 bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">{tier.discount}</span>
+                        </>
+                      ) : (
+                        <p className="text-3xl font-medium text-gray-900">{tier.buildFee}</p>
+                      )}
+                    </div>
                   </div>
-                  <div className="mb-6">
+                  
+                  {/* <div className="mb-6">
                     <p className="text-gray-600 text-sm uppercase tracking-wide">Pay-As-You-Go Cost</p>
                     <p className="text-lg font-medium text-gray-900 mt-1">{tier.usageFee}</p>
+                  </div> */}
+                  
+                  <div className="mb-6">
+                    <p className="text-gray-600 text-sm uppercase tracking-wide">What You Get</p>
+                    <div className="space-y-3 mt-3">
+                      {tier.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start">
+                          <Check className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-800">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="space-y-3 mb-6 flex-grow">
-                    {tier.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start">
-                        <Check className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-800">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+                  
+                  {tier.guarantee && (
+                    <div className="mb-6 bg-gray-50 border border-gray-200 rounded-lg p-3">
+                      <p className="text-sm font-medium text-gray-800">{tier.guarantee}</p>
+                    </div>
+                  )}
+                  
+                  <p className="text-sm text-gray-700 mb-6">{tier.callToAction}</p>
+                  
                   <button className={`w-full py-3 rounded-full text-sm uppercase font-medium ${tier.highlighted ? 'bg-secondary text-white' : 'bg-primary text-white'} hover:opacity-90 transition-opacity mt-auto`}>
-                    Get 500 Free Sessions
+                    Get Free Consultation
                   </button>
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* What Sets Us Apart */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-medium text-gray-900 text-center">What Sets Us Apart?</h3>
+            
+            <div className="mt-8 grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h4 className="font-medium text-lg text-gray-900 mb-2">No Hidden Costs</h4>
+                <p className="text-gray-700">Pay only for what you use with transparent pricing—no server fees, ever.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h4 className="font-medium text-lg text-gray-900 mb-2">Grow with Ease</h4>
+                <p className="text-gray-700">Start small and upgrade later. Special Offer: Upgrade from Basic to Growth or Enterprise within 6 months and enjoy 10% off the build fee.</p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h4 className="font-medium text-lg text-gray-900 mb-2">Zero Risk</h4>
+                <p className="text-gray-700">Every plan comes with guarantees, so you can try us worry-free.</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Final CTA */}
+          <div className="mt-12 text-center">
+            <h3 className="text-2xl font-medium text-gray-900">Ready to Get Started?</h3>
+            <p className="mt-2 text-gray-700 max-w-2xl mx-auto">
+              Your smarter, more efficient business is just a click away. Act now: Limited spots and time-sensitive bonuses won't last!
+            </p>
+            <button className="mt-6 bg-secondary text-white text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-opacity-90 transition-colors">
+              Get Free Consultation
+            </button>
           </div>
           
           {/* Integrations */}
@@ -426,28 +547,29 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Referral Section */}
-      <section className="py-12 md:py-16 px-6 md:px-12 lg:px-24 bg-secondary">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-          <div className="text-center md:text-left mb-6 md:mb-0">
-            <h2 className="text-2xl md:text-3xl font-medium text-white">Referral Program</h2>
-            <p className="mt-2 text-white text-opacity-90">
-              Earn a 15% commission on the one-time build fee for every client you refer.
-            </p>
-            <ul className="mt-4 space-y-1">
-              <li className="text-white text-opacity-90 flex items-center">
-                <Check className="h-4 w-4 mr-2" />
-                <span>Paid within 30 days of client onboarding</span>
-              </li>
-              <li className="text-white text-opacity-90 flex items-center">
-                <Check className="h-4 w-4 mr-2" />
-                <span>Open to partners, agencies, and individuals</span>
-              </li>
-            </ul>
+      {/* Benefits Section */}
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Business Benefits of Chatbots</h2>
+          <p className="mt-4 text-center text-gray-700 max-w-2xl mx-auto">
+            Transform your business operations and customer experience with AI-powered chatbot solutions.
+          </p>
+          
+          <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div 
+                key={index} 
+                className="bg-background rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow animate-on-scroll opacity-0"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-medium text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-700">{benefit.description}</p>
+              </div>
+            ))}
           </div>
-          <button className="bg-white text-secondary text-sm uppercase font-medium px-8 py-3 rounded-full hover:bg-gray-100 transition-colors">
-            Invite Now
-          </button>
         </div>
       </section>
       
@@ -540,7 +662,7 @@ export default function Home() {
   <div className="max-w-7xl mx-auto text-center">
     <h2 className="text-3xl md:text-4xl font-medium">Ready to Get Started?</h2>
     <p className="mt-4 text-lg text-white text-opacity-90 max-w-2xl mx-auto">
-      Contact Akshay Kumar BM for a custom quote or to claim your free sessions
+      Contact Akshay Kumar BM for a custom quote or to schedule your free consultation
     </p>
 
     <div className="mt-8 grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
@@ -570,7 +692,7 @@ export default function Home() {
     </div>
 
     <a href="#contact" className="mt-10 inline-block bg-white text-primary text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-gray-100 transition-colors">
-      GET 500 FREE SESSIONS
+      GET FREE CONSULTATION
     </a>
   </div>
 </section>
