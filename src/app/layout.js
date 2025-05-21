@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import '../styles/form-responsive.css';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export const metadata = {
     description: "Build once. Only pay when used. No monthly charges if idle – perfect for ROI-focused companies and startups in India.",
     images: ["/twitter-image.jpg"],
   },
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
 };
 
 export default function RootLayout({ children }) {

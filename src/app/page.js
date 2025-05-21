@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronRight, Check, Menu, X, Smartphone, MessageCircle, Database, Shield, ArrowRight, Clock, TrendingUp, Users, HeartHandshake } from 'lucide-react';
 import ChatbotWidget from '../components/ChatbotWidget';
+import Link from 'next/link';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -240,9 +241,9 @@ export default function Home() {
           <a href="#contact" className="text-sm font-medium text-gray-700 hover:text-primary">Contact</a>
         </nav>
         
-        <button className="hidden md:block bg-primary text-white text-sm uppercase font-medium px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
+        <Link href="/consultation" className="hidden md:block bg-primary text-white text-sm uppercase font-medium px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
           Get Free Consultation
-        </button>
+        </Link>
         
         {/* Mobile menu button */}
         <button 
@@ -265,9 +266,9 @@ export default function Home() {
           <a href="#pricing" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Pricing</a>
           <a href="#tech" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Tech Stack</a>
           <a href="#contact" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Contact</a>
-          <button className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors">
+          <Link href="/consultation" className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center">
             Get Free Consultation
-          </button>
+          </Link>
         </div>
       )}
       
@@ -282,9 +283,9 @@ export default function Home() {
               Build once. Only pay when used. No monthly charges if idle – perfect for ROI-focused companies and startups in India.
             </p>
             <div className="mt-8 space-x-4 flex flex-wrap gap-4">
-              <a href="#contact" className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center">
+              <Link href="/consultation" className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center">
                 Get Free Consultation
-              </a>
+              </Link>
               <a href="#pricing" className="border border-primary text-primary text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-50 transition-colors text-center">
                 See Pricing
               </a>
@@ -691,9 +692,9 @@ export default function Home() {
       </div>
     </div>
 
-    <a href="#contact" className="mt-10 inline-block bg-white text-primary text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-gray-100 transition-colors">
+    <Link href="/consultation" className="mt-10 inline-block bg-white text-primary text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-gray-100 transition-colors">
       GET FREE CONSULTATION
-    </a>
+    </Link>
   </div>
 </section>
 
