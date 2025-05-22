@@ -12,12 +12,12 @@ export default function ConsultationPage() {
           <Link href="/" className="text-primary hover:underline">
             ← Back to Home
           </Link>
-          <h1 className="mt-4 text-3xl font-bold text-gray-900">
+          {/* <h1 className="mt-4 text-3xl font-bold text-gray-900">
             Schedule Your Free Consultation
-          </h1>
-          <p className="mt-2 text-lg text-gray-600">
+          </h1> */}
+          {/* <p className="mt-2 text-lg text-gray-600">
             Let us know about your business needs and we'll help you create the perfect chatbot solution.
-          </p>
+          </p> */}
         </div>
         
         <ConsultationForm />

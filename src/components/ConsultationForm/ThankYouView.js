@@ -1,19 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
 import { Check } from 'lucide-react';
+import Script from 'next/script';
 
-// This component would be replaced with an actual Calendly integration
+// Replace the placeholder with a real Calendly integration
 const CalendlyEmbed = () => (
-  <div className="border border-gray-300 rounded-md p-4 mt-6 bg-white h-[450px]">
-    <div className="flex items-center justify-center h-full">
-      <div className="text-center">
-        <h3 className="text-lg font-medium text-gray-900 mb-2">Calendly Booking Widget</h3>
-        <p className="text-gray-600">
-          This is where the Calendly scheduling widget would be embedded.
-          <br />
-          You can schedule your consultation appointment here.
-        </p>
-      </div>
+  <div className="border border-gray-300 rounded-md p-4 mt-6 bg-white h-[650px]">
+    <div id="calendly-embed" className="h-full w-full">
+      <Script
+        src="https://assets.calendly.com/assets/external/widget.js"
+        onLoad={() => {
+          if (window.Calendly) {
+            window.Calendly.initInlineWidget({
+              url: 'https://calendly.com/akshaykumarbm-aifx/30min',
+              parentElement: document.getElementById('calendly-embed'),
+              prefill: {},
+              utm: {}
+            });
+          }
+        }}
+      />
     </div>
   </div>
 );
@@ -49,7 +55,10 @@ const ThankYouView = ({ formData }) => {
         </ul>
       </div>
       
-      <CalendlyEmbed />
+      <div className="mb-6">
+        <h3 className="text-lg font-medium text-gray-900 mb-3">Or Schedule Your Call Now:</h3>
+        <CalendlyEmbed />
+      </div>
       
       <div className="mt-6 text-center">
         <p className="text-sm text-gray-600">
@@ -60,7 +69,7 @@ const ThankYouView = ({ formData }) => {
         </p>
       </div>
 
-      <Link href="/" className="inline-block bg-primary text-white font-medium px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-blue-700 transition-colors">
+      <Link href="/" className="inline-block mt-4 bg-primary text-white font-medium px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-blue-700 transition-colors">
         Return to Homepage
       </Link>
     </div>

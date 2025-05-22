@@ -266,7 +266,7 @@ export default function Home() {
           <a href="#pricing" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Pricing</a>
           <a href="#tech" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Tech Stack</a>
           <a href="#contact" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Contact</a>
-          <Link href="/consultation" className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center">
+          <Link href="/consultation" className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center" onClick={() => setIsMenuOpen(false)}>
             Get Free Consultation
           </Link>
         </div>
@@ -466,9 +466,9 @@ export default function Home() {
                   
                   <p className="text-sm text-gray-700 mb-6">{tier.callToAction}</p>
                   
-                  <button className={`w-full py-3 rounded-full text-sm uppercase font-medium ${tier.highlighted ? 'bg-secondary text-white' : 'bg-primary text-white'} hover:opacity-90 transition-opacity mt-auto`}>
+                  <Link href="/consultation" className={`w-full py-3 rounded-full text-sm uppercase font-medium ${tier.highlighted ? 'bg-secondary text-white' : 'bg-primary text-white'} hover:opacity-90 transition-opacity mt-auto block text-center`}>
                     Get Free Consultation
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -502,9 +502,9 @@ export default function Home() {
             <p className="mt-2 text-gray-700 max-w-2xl mx-auto">
               Your smarter, more efficient business is just a click away. Act now: Limited spots and time-sensitive bonuses won't last!
             </p>
-            <button className="mt-6 bg-secondary text-white text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-opacity-90 transition-colors">
+            <Link href="/consultation" className="mt-6 bg-secondary text-white text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-opacity-90 transition-colors inline-block">
               Get Free Consultation
-            </button>
+            </Link>
           </div>
           
           {/* Integrations */}
