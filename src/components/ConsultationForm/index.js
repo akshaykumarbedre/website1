@@ -17,15 +17,13 @@ const ConsultationForm = () => {
     defaultValues: {
       fullName: '',
       email: '',
+      phoneNumber: '',
+      bestTimeToCall: '',
       businessName: '',
-      businessDescription: '',
-      chatbotObjectives: {
-        customerSupport: false,
-        leadGeneration: false,
-        appointmentBooking: false,
-        other: false
-      },
-      otherObjective: '',
+      industry: '',
+      monthlyRevenue: '',
+      timeWastingTask: '',
+      teamSize: '',
       budget: '',
       timeline: '',
       additionalComments: ''
@@ -47,9 +45,9 @@ const ConsultationForm = () => {
 
   const handleNext = useCallback(async () => {
     const fieldsToValidate = {
-      0: ['fullName', 'email'],
-      1: ['businessName', 'businessDescription'],
-      2: ['chatbotObjectives'],
+      0: ['fullName', 'email', 'phoneNumber', 'bestTimeToCall'],
+      1: ['businessName', 'industry', 'monthlyRevenue'],
+      2: ['timeWastingTask', 'teamSize'],
       3: ['budget', 'timeline']
     };
 

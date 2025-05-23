@@ -34,7 +34,7 @@ const ThankYouView = ({ formData }) => {
       <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900 mb-3 sm:mb-4">Thank You!</h2>
       
       <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-        Your consultation request has been received. We'll contact you at <span className="font-medium text-primary">{formData.email}</span> within 24 hours to schedule your free consultation.
+        Your consultation request has been received. We'll contact you at <span className="font-medium text-primary">{formData.phoneNumber}</span> within 24 hours to schedule your free consultation.
       </p>
       
       <div className="bg-gray-50 rounded-lg p-4 sm:p-6 mb-6 sm:mb-8 text-left">

@@ -45,6 +45,48 @@ const StepOne = () => {
           <p className="mt-1 text-red-600 text-xs sm:text-sm">{errors.email.message}</p>
         )}
       </div>
+
+      <div>
+        <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">
+          Phone Number
+        </label>
+        <input
+          id="phoneNumber"
+          type="tel"
+          {...register('phoneNumber', { 
+            required: 'Phone number is required',
+            pattern: {
+              value: /^[+]?[\d\s\-\(\)]+$/,
+              message: 'Please enter a valid phone number'
+            }
+          })}
+          className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+          placeholder="Enter your phone number"
+        />
+        {errors.phoneNumber && (
+          <p className="mt-1 text-red-600 text-xs sm:text-sm">{errors.phoneNumber.message}</p>
+        )}
+      </div>
+
+      <div>
+        <label htmlFor="bestTimeToCall" className="block text-sm font-medium text-gray-700 mb-1">
+          Best time to call
+        </label>
+        <select
+          id="bestTimeToCall"
+          {...register('bestTimeToCall', { required: 'Please select your preferred time' })}
+          className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border focus:ring-2 focus:ring-primary focus:border-primary transition-all bg-white"
+        >
+          <option value="">Select your preferred time</option>
+          <option value="morning">Morning (9 AM - 12 PM)</option>
+          <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+          <option value="evening">Evening (5 PM - 8 PM)</option>
+          <option value="anytime">Anytime</option>
+        </select>
+        {errors.bestTimeToCall && (
+          <p className="mt-1 text-red-600 text-xs sm:text-sm">{errors.bestTimeToCall.message}</p>
+        )}
+      </div>
     </div>
   );
 };
