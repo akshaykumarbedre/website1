@@ -58,10 +58,9 @@ export default function ChatbotPage() {
     
     try {
       const response = await axios.post(
-        'https://5ccgqo82ug.execute-api.us-east-1.amazonaws.com/Chatbot-for-website',
+        'http://localhost:8001/api/chatbot/query',
         { 
-          inputText: userMessage,
-          sessionId: sessionId
+          query: userMessage
         },
         {
           headers: {

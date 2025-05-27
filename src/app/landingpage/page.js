@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ChevronRight, Check, Menu, X, Smartphone, MessageCircle, Database, Shield, ArrowRight, Clock, TrendingUp, Users, HeartHandshake } from 'lucide-react';
-import ChatbotWidget from '../components/ChatbotWidget';
+import { ChevronRight, Check, Menu, X, Smartphone, MessageCircle, Database, Shield, ArrowRight, Clock, TrendingUp, Users, HeartHandshake, Star, AlertCircle } from 'lucide-react';
+import ChatbotWidget from '../../components/ChatbotWidget';
 import Link from 'next/link';
 
 export default function Home() {
@@ -39,94 +39,95 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
   
-  // Features data
+  // Features data - Reframed as outcomes
   const features = [
     {
-      title: "Effortless Integration",
-      description: "We manage both development and deployment, ensuring your chatbot integrates seamlessly with your website or platform—saving you time and resources so you can focus on running your business.",
+      title: "Your Bot Gets Smarter Every Day",
+      description: "Real customer feedback automatically improves your bot's responses—so you never miss sales due to poor answers. Stop losing leads to confusion.",
       icon: <Database className="h-12 w-12 text-primary" />
     },
     {
-      title: "Confidence in Adoption",
-      description: "Use 500 free sessions to test and refine your chatbot, minimizing risk and ensuring it aligns perfectly with your business goals before you commit.",
+      title: "Test Without Risk, Scale With Confidence",
+      description: "500 free sessions let you prove ROI before investing more. No guesswork—see exactly how much time and money you'll save.",
       icon: <MessageCircle className="h-12 w-12 text-primary" />
     },
     {
-      title: "Ongoing Optimization",
-      description: "Benefit from two free optimization rounds post-launch, using real user feedback to keep your chatbot performing at its best—driving customer satisfaction and business success.",
+      title: "Respond Faster Than Your Competition",
+      description: "While competitors take hours to reply, your customers get instant, accurate answers 24/7. Turn response speed into your competitive advantage.",
       icon: <ChevronRight className="h-12 w-12 text-primary" />
     },
     {
-      title: "Enhanced Website Functionality",
-      description: "Add value with a free, customizable chatbot widget that improves user experience and engagement, potentially increasing conversions at no extra cost.",
+      title: "Turn Website Visitors Into Customers",
+      description: "Engage visitors the moment they land on your site. Answer questions instantly and guide them to purchase—don't let them leave without converting.",
       icon: <Smartphone className="h-12 w-12 text-primary" />
     }
   ];
   
-  // Pricing tiers
+  // Pricing tiers - Enhanced with ROI taglines
   const pricingTiers = [
     {
       name: "Basic",
-      tagline: "Perfect for Startups and Small Businesses",
+      tagline: "Perfect for small teams who need support automation without tech headaches",
+      roiTagline: "Save 20+ hours/week on repetitive customer queries",
       description: "FAQ bot, simple rule-based or RAG",
       buildFee: "₹40,000",
       discountedFee: "₹32,000",
       discount: "20% OFF",
-      limitedDeal: "Limited-Time Deal: First 10 customers get 20% off!",
+      limitedDeal: "⚡ Limited-Time: Next 5 customers get 20% off + free demo!",
      
       features: [
-        "500 free sessions to start strong",
-        "Seamless website embedding for effortless integration",
-        "Basic Q&A capabilities to tackle FAQs",
-        "Email support to keep you on track",
-        "Free 1-hour consultation (worth ₹5,000)"
+        "500 free sessions to prove ROI before you pay more",
+        "Instant website integration—no developer needed",
+        "Handle your top 10 FAQs automatically",
+        "Email support to keep you moving",
+        "Free 1-hour strategy call (worth ₹5,000)"
       ],
-      guarantee: "Risk-Free Guarantee: Not happy? Full refund within 30 days—no questions asked.",
-      callToAction: "Why Choose Basic? Automate your customer service basics with zero risk. With only 10 discounted spots, act fast to lock in this deal!"
+      guarantee: "🛡️ Zero-Risk Promise: Not happy? Full refund within 30 days—no questions asked.",
+      callToAction: "Stop wasting time on repetitive questions. Automate your FAQs risk-free and reclaim your day!"
     },
     {
       name: "Growth",
-      tagline: "Built for Scaling Businesses Ready to Level Up",
+      tagline: "Built for scaling businesses ready to plug into existing tools",
+      roiTagline: "Reduce support tickets by 65% while increasing satisfaction",
       description: "Database/API integration, CRM sync",
       buildFee: "₹1,00,000",
-
       discountedFee: "₹89,000",
       discount: "10% OFF",
-      bonus: "This Month Only: Free team training session (worth ₹20,000)!",
+      bonus: "🎁 This Month Only: Free team training session (worth ₹20,000)!",
 
       features: [
         "500 free sessions to fuel your growth",
-        "API integrations to sync with your tools",
-        "CRM synchronization for smarter interactions",
-        "Custom branding to reflect your identity",
-        "Priority support to keep you ahead",
-        "Free training session to empower your team"
+        "Sync customer data from your CRM automatically",
+        "Connect to your existing tools without hassle",
+        "Custom branding that matches your business",
+        "Priority support—get help when you need it",
+        "Free training to get your team up to speed"
       ],
-      guarantee: "Performance Guarantee: If your bot doesn't handle 1,000 queries in the first month, we'll refund 50% of your build fee.",
-      callToAction: "Take your customer service to the next level with advanced features and a no-fail promise. Sign up this month to claim your bonus!",
+      guarantee: "📈 Performance Promise: If your bot doesn't handle 1,000+ queries in month 1, we refund 50% of your build fee.",
+      callToAction: "Scale your customer service without scaling your team. Connect everything seamlessly and watch productivity soar!",
       highlighted: true
     },
     {
       name: "Enterprise",
-      tagline: "The Ultimate Solution for Large Enterprises",
+      tagline: "Built for brands with complex needs and high stakes",
+      roiTagline: "Complete customer service transformation with dedicated support",
       description: "Admin panel, agent app, ERP/CRM",
       buildFee: "₹3,00,000",
       discountedFee: "₹2,55,000",
-    
       discount: "15% OFF",
 
       features: [
         "500 free sessions to kick things off",
-        "Full admin dashboard for total control",
-        "Agent application to empower your team",
-        "ERP/CRM integration for seamless workflows",
-        "Custom analytics to measure success",
-        "White labeling to keep your brand front and center",
-        "24/7 support for round-the-clock assistance",
-        "Dedicated account manager (worth ₹50,000)"
+        "Full control with custom admin dashboard",
+        "Empower your team with agent applications",
+        "Seamless ERP/CRM integration",
+        "Know what customers want with custom analytics",
+        "Your brand front and center with white labeling",
+        "24/7 support—we've got your back",
+        "Dedicated success manager (worth ₹50,000)"
       ],
-      guarantee: "Ironclad SLA: 99.9% uptime guaranteed—or we compensate you for downtime.",
-      callToAction: "This isn't just a chatbot—it's a custom-built powerhouse with premium support. Your dedicated manager ensures it works perfectly for you."
+      guarantee: "⚡ Ironclad SLA: 99.9% uptime guaranteed—or we compensate you for every minute of downtime.",
+      callToAction: "This isn't just software—it's a complete customer service transformation with a dedicated team ensuring your success."
     }
   ];
   
@@ -168,58 +169,61 @@ export default function Home() {
     "Pay only for what you use; no idle fees."
   ];
   
-  // Testimonials
+  // Testimonials - Enhanced with use case context
   const testimonials = [
     {
       quote: "We deployed their chatbot on our e-commerce site and saw customer support inquiries drop by 65% while maintaining high satisfaction scores.",
       author: "Priya Sharma",
       position: "CTO, RetailTech India",
+      useCase: "E-commerce • Reduced Support Load",
       rating: 5
     },
     {
       quote: "The zero monthly fee model was perfect for our seasonal business. We only pay when customers are actually using the service.",
       author: "Rahul Mehta",
       position: "Founder, TravelBuddy",
+      useCase: "Seasonal Business • Cost Optimization",
       rating: 5
     },
     {
       quote: "Integration was seamless and the two optimization rounds really helped fine-tune our chatbot's responses to match our brand voice.",
       author: "Ananya Patel",
       position: "Marketing Director, FinServe",
+      useCase: "Financial Services • Brand Matching",
       rating: 4
     }
   ];
   
-  // Benefits data
+  // Benefits data - Reframed as outcomes
   const benefits = [
     {
-      title: "24/7 Customer Support",
-      description: "Provide round-the-clock service to your customers without increasing staffing costs.",
+      title: "Never Lose Another Lead to Slow Responses",
+      description: "Instant 24/7 support means customers get answers immediately—turning more visitors into paying customers.",
       icon: <Clock className="h-12 w-12 text-primary" />
     },
     {
-      title: "Increased Conversion Rates",
-      description: "Convert more visitors into customers with instant responses to inquiries and personalized recommendations.",
+      title: "Turn More Visitors Into Paying Customers",
+      description: "Personalized recommendations and instant question-answering guide prospects to purchase faster than ever.",
       icon: <TrendingUp className="h-12 w-12 text-primary" />
     },
     {
-      title: "Reduced Operational Costs",
-      description: "Automate repetitive tasks and handle multiple conversations simultaneously to lower support costs.",
+      title: "Cut Support Costs by 60%+ Overnight",
+      description: "Handle dozens of conversations simultaneously while your team focuses on high-value work that grows your business.",
       icon: <Shield className="h-12 w-12 text-primary" />
     },
     {
-      title: "Enhanced Customer Experience",
-      description: "Deliver consistent, personalized interactions that improve customer satisfaction and loyalty.",
+      title: "Delight Customers With Consistent Excellence",
+      description: "Every interaction is perfect—no bad days, no inconsistent answers, just reliable service that builds loyalty.",
       icon: <HeartHandshake className="h-12 w-12 text-primary" />
     },
     {
-      title: "Valuable Data Insights",
-      description: "Gain insights into customer needs, frequently asked questions, and pain points to improve your business.",
+      title: "Know Exactly What Customers Want",
+      description: "Stop guessing about customer needs. Get real insights into pain points and opportunities to improve your business.",
       icon: <Database className="h-12 w-12 text-primary" />
     },
     {
-      title: "Scalable Customer Interactions",
-      description: "Handle surges in customer inquiries during peak times without adding resources.",
+      title: "Handle Rush Periods Without Breaking",
+      description: "Black Friday? Product launch? No problem. Scale instantly without hiring temporary staff or missing opportunities.",
       icon: <Users className="h-12 w-12 text-primary" />
     }
   ];
@@ -251,7 +255,7 @@ export default function Home() {
         </nav>
         
         <Link href="/consultation" className="hidden md:block bg-primary text-white text-sm uppercase font-medium px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
-          Get Free Consultation
+          Book Free Strategy Call
         </Link>
         
         {/* Mobile menu button */}
@@ -276,28 +280,52 @@ export default function Home() {
           <a href="#tech" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Tech Stack</a>
           <a href="#contact" className="text-lg font-medium text-gray-900" onClick={() => setIsMenuOpen(false)}>Contact</a>
           <Link href="/consultation" className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center" onClick={() => setIsMenuOpen(false)}>
-            Get Free Consultation
+            Book Free Strategy Call
           </Link>
         </div>
       )}
       
+      {/* Risk-Free Banner */}
+      <div className="fixed top-16 left-0 right-0 bg-green-600 text-white text-center py-2 px-4 z-40">
+        <p className="text-sm font-medium">
+          🛡️ Try Risk-Free: 30-Day Money-Back Guarantee • Next 5 consultations get a custom demo!
+        </p>
+      </div>
+      
       {/* Hero Section */}
-      <section id="home" className="pt-24 md:pt-32 pb-16 md:pb-24 px-6 md:px-12 lg:px-24 bg-white">
+      <section id="home" className="pt-32 md:pt-40 pb-16 md:pb-24 px-6 md:px-12 lg:px-24 bg-white">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+              <div className="flex items-start">
+                <AlertCircle className="h-5 w-5 text-red-600 mr-2 mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-red-800 font-medium">Your Customers Are Waiting.</p>
+                  <p className="text-red-700 text-sm mt-1">You spend hours on the same 5 questions. You lose leads when you're offline. Your team is overwhelmed.</p>
+                </div>
+              </div>
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 leading-tight">
-              Smarter AI Chatbots for Every Business
+              Stop Losing Sales to Slow Responses
             </h1>
             <p className="mt-6 text-lg md:text-xl text-gray-700 leading-relaxed">
-              Build once. Only pay when used. No monthly charges if idle – perfect for ROI-focused companies and startups in India.
+              Automate customer support with AI chatbots that work 24/7—no idle costs, no hassle. Build once, pay only when customers actually use it.
             </p>
             <div className="mt-8 space-x-4 flex flex-wrap gap-4">
-              <Link href="/consultation" className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center">
-                Get Free Consultation
+              <Link href="/consultation" className="bg-primary text-white text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-700 transition-colors text-center flex items-center">
+                Book Your Free Strategy Call
+                <ArrowRight className="h-4 w-4 ml-2" />
               </Link>
               <a href="#pricing" className="border border-primary text-primary text-sm uppercase font-medium px-6 py-3 rounded-full hover:bg-blue-50 transition-colors text-center">
-                See Pricing
+                See How Much You'll Save
               </a>
+            </div>
+            
+            <div className="mt-6 flex items-center text-sm text-gray-600">
+              <Star className="h-4 w-4 text-yellow-500 mr-1" />
+              <span className="font-medium mr-2">500+ businesses</span>
+              <span>reduced support time by 65%</span>
             </div>
           </div>
           <div className="relative h-64 md:h-auto">
@@ -339,7 +367,10 @@ export default function Home() {
       {/* Features Section */}
       <section id="features" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-background">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Why Choose Us</h2>
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Stop Wasting Time. Start Winning Customers.</h2>
+          <p className="mt-4 text-center text-gray-700 max-w-2xl mx-auto">
+            While your competition struggles with slow support, you'll be converting visitors into customers 24/7.
+          </p>
           
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -401,9 +432,9 @@ export default function Home() {
       {/* Pricing Section */}
       <section id="pricing" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-background">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Pick Your Plan</h2>
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Choose Your Customer Service Transformation</h2>
           <p className="mt-4 text-center text-gray-700 max-w-2xl mx-auto">
-            Choose the plan that fits your business needs. All plans include 500 free sessions to get started.
+            Every plan includes 500 free sessions to prove ROI before you invest more. No hidden costs, no surprises.
           </p>
           
           <div className="mt-12 grid md:grid-cols-3 gap-8">
@@ -419,8 +450,9 @@ export default function Home() {
                   </div>
                 )}
                 <div className={`${tier.highlighted ? 'bg-secondary' : 'bg-primary'} text-white py-4 px-6`}>
-                  <h3 className="text-xl font-medium">Tier {index + 1}: {tier.name}</h3>
-                  <p className="text-white text-opacity-90 mt-1">{tier.tagline}</p>
+                  <h3 className="text-xl font-medium">{tier.name}</h3>
+                  <p className="text-white text-opacity-90 mt-1 text-sm">{tier.tagline}</p>
+                  <p className="text-white text-opacity-90 mt-2 font-medium">{tier.roiTagline}</p>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   {tier.limitedDeal && (
@@ -436,7 +468,7 @@ export default function Home() {
                   )}
                   
                   <div className="mb-6">
-                    <p className="text-gray-600 text-sm uppercase tracking-wide">Build Fee (One-Time)</p>
+                    <p className="text-gray-600 text-sm uppercase tracking-wide">One-Time Investment</p>
                     <div className="flex items-end mt-1">
                       {tier.discountedFee ? (
                         <>
@@ -449,11 +481,6 @@ export default function Home() {
                       )}
                     </div>
                   </div>
-                  
-                  {/* <div className="mb-6">
-                    <p className="text-gray-600 text-sm uppercase tracking-wide">Pay-As-You-Go Cost</p>
-                    <p className="text-lg font-medium text-gray-900 mt-1">{tier.usageFee}</p>
-                  </div> */}
                   
                   <div className="mb-6">
                     <p className="text-gray-600 text-sm uppercase tracking-wide">What You Get</p>
@@ -468,19 +495,47 @@ export default function Home() {
                   </div>
                   
                   {tier.guarantee && (
-                    <div className="mb-6 bg-gray-50 border border-gray-200 rounded-lg p-3">
-                      <p className="text-sm font-medium text-gray-800">{tier.guarantee}</p>
+                    <div className="mb-6 bg-green-50 border border-green-200 rounded-lg p-3">
+                      <p className="text-sm font-medium text-green-800">{tier.guarantee}</p>
                     </div>
                   )}
                   
                   <p className="text-sm text-gray-700 mb-6">{tier.callToAction}</p>
                   
                   <Link href="/consultation" className={`w-full py-3 rounded-full text-sm uppercase font-medium ${tier.highlighted ? 'bg-secondary text-white' : 'bg-primary text-white'} hover:opacity-90 transition-opacity mt-auto block text-center`}>
-                    Get Free Consultation
+                    Start Your Transformation
                   </Link>
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* Risk-Free Guarantee Section */}
+          <div className="mt-16 bg-white rounded-xl p-8 shadow-lg border-2 border-green-200">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-medium text-gray-900 mb-4">Try It, Risk-Free</h3>
+              <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+                Not satisfied in 30 days? Get your money back. No questions asked. 
+                Plus, use 500 free sessions to prove ROI before paying for more.
+              </p>
+              <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
+                <div className="flex items-center justify-center">
+                  <Check className="h-4 w-4 text-green-600 mr-2" />
+                  <span>30-day money-back guarantee</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Check className="h-4 w-4 text-green-600 mr-2" />
+                  <span>500 free sessions included</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Check className="h-4 w-4 text-green-600 mr-2" />
+                  <span>No contracts or commitments</span>
+                </div>
+              </div>
+            </div>
           </div>
           
           {/* What Sets Us Apart */}
@@ -507,13 +562,16 @@ export default function Home() {
           
           {/* Final CTA */}
           <div className="mt-12 text-center">
-            <h3 className="text-2xl font-medium text-gray-900">Ready to Get Started?</h3>
+            <h3 className="text-2xl font-medium text-gray-900">Ready to Stop Losing Customers?</h3>
             <p className="mt-2 text-gray-700 max-w-2xl mx-auto">
-              Your smarter, more efficient business is just a click away. Act now: Limited spots and time-sensitive bonuses won't last!
+              Your competitors are answering customer questions slowly. You'll be converting them 24/7. 
+              Limited spots for our free strategy call—book now!
             </p>
-            <Link href="/consultation" className="mt-6 bg-secondary text-white text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-opacity-90 transition-colors inline-block">
-              Get Free Consultation
+            <Link href="/consultation" className="mt-6 bg-secondary text-white text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-opacity-90 transition-colors inline-flex items-center">
+              Book Your Free Strategy Call Now
+              <ArrowRight className="h-4 w-4 ml-2" />
             </Link>
+            <p className="mt-2 text-sm text-gray-600">⚡ Next 5 consultations include a custom demo</p>
           </div>
           
           {/* Integrations */}
@@ -560,9 +618,9 @@ export default function Home() {
       {/* Benefits Section */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Business Benefits of Chatbots</h2>
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Transform Your Business Results</h2>
           <p className="mt-4 text-center text-gray-700 max-w-2xl mx-auto">
-            Transform your business operations and customer experience with AI-powered chatbot solutions.
+            Stop competing on price. Start winning on service speed and quality.
           </p>
           
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -586,7 +644,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">What Our Clients Say</h2>
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 text-center">Real Results From Real Businesses</h2>
           
           <div className="mt-12 max-w-3xl mx-auto relative">
             {testimonials.map((testimonial, index) => (
@@ -594,12 +652,17 @@ export default function Home() {
                 key={index}
                 className={`bg-white rounded-xl p-6 shadow-md transition-opacity duration-500 ${activeTestimonial === index ? 'opacity-100' : 'opacity-0 absolute top-0 left-0 right-0'}`}
               >
-                <div className="flex items-center space-x-1 mb-4">
+                <div className="flex items-center space-x-1 mb-2">
                   {[...Array(5)].map((_, i) => (
                     <div key={i} className={`w-5 h-5 ${i < testimonial.rating ? 'text-yellow-500' : 'text-gray-300'}`}>
                       ★
                     </div>
                   ))}
+                </div>
+                <div className="mb-2">
+                  <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">
+                    {testimonial.useCase}
+                  </span>
                 </div>
                 <p className="text-gray-800 italic">"{testimonial.quote}"</p>
                 <div className="mt-4">
@@ -670,9 +733,9 @@ export default function Home() {
     {/* CTA Section */}
 <section id="contact" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-primary text-white">
   <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-3xl md:text-4xl font-medium">Ready to Get Started?</h2>
+    <h2 className="text-3xl md:text-4xl font-medium">Stop Losing Customers. Start Today.</h2>
     <p className="mt-4 text-lg text-white text-opacity-90 max-w-2xl mx-auto">
-      Contact Akshay Kumar BM for a custom quote or to schedule your free consultation
+      Book your free strategy call with Akshay Kumar BM and discover exactly how much time and money you'll save.
     </p>
 
     <div className="mt-8 grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
@@ -701,9 +764,14 @@ export default function Home() {
       </div>
     </div>
 
-    <Link href="/consultation" className="mt-10 inline-block bg-white text-primary text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-gray-100 transition-colors">
-      GET FREE CONSULTATION
+    <Link href="/consultation" className="mt-10 inline-flex items-center bg-white text-primary text-sm uppercase font-medium px-8 py-4 rounded-full hover:bg-gray-100 transition-colors">
+      Book Your Free Strategy Call Now
+      <ArrowRight className="h-4 w-4 ml-2" />
     </Link>
+    
+    <p className="mt-3 text-white text-opacity-80 text-sm">
+      ⚡ Limited: Next 5 calls include a custom demo • 30-day money-back guarantee
+    </p>
   </div>
 </section>
 
